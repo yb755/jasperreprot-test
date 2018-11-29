@@ -25,27 +25,28 @@ public class App {
 		String jrxmlDestSourcePath = parentPath + "/"+jrxmlfile.substring(0,jrxmlfile.lastIndexOf("."))+".jasper";
 		System.out.println(jrxmlDestSourcePath);
 		File jasperFile = new File(jrxmlDestSourcePath);
-		if (!jasperFile.exists() || !jasperFile.isFile()) {
+		//if (!jasperFile.exists() || !jasperFile.isFile()) {
 			System.out.println("编绎jasper文件");
 			JasperCompileManager.compileReportToFile(path, jrxmlDestSourcePath);
-		}
+		//}
 		return jrxmlDestSourcePath;
 	}
 
 	public static void main(String[] args) {
 		try {
-			String jasperFile = compile("insurance_have_price.jrxml");
+			String jasperFile = compile("insurance_no_price.jrxml");
 
 			// 准备需要数据
 			Map<String, Object> parameters = new HashMap<String, Object>();
-			parameters.put("VALID_TIME_RANGE", "从北京时间2018-11-28 00:00:00生效,到2019-11-27 23:59:59截止");
-			parameters.put("CAR_OWNER", "叶兵");
+			parameters.put("VALID_DATE_RANGE", "2018-11-28  至 2019-11-27");
+			parameters.put("CAR_OWNER", "叶兵2");
 			parameters.put("INSURANCE_NO", "000001");
 			parameters.put("CARD_NO", "430723201112541254");
 			parameters.put("CAR_NO", "粤BR651T");
 			parameters.put("CAR_MODEL", "大众宝来");
 			parameters.put("REGISTER_DATE", "2012-05-09");
 			parameters.put("CAR_PRICE", "12.75万元");
+			parameters.put("PAY_FOR_MONEY", "50");			
 			parameters.put("DEVICE_NO", "3651254125221111");
 			parameters.put("INSTALL_DATE", "2018-10-25");
 			parameters.put("ENGINE_NO", "558806");
@@ -55,6 +56,10 @@ public class App {
 			parameters.put("YEAR", "2018");
 			parameters.put("MONTH", "11");
 			parameters.put("DAY", "27");
+			
+			parameters.put("IMG_BACKGROUND", "C:\\bg_no_price.jpg");
+			parameters.put("IMG_MARK_BY", "C:\\marker_20181129093813.png");
+			parameters.put("IMG_MARK_RB", "C:\\marker_20181129093818.png");
 
 			// 第三个参数: 必须有, 但可以是空数据源
 			JasperPrint jasperPrint = JasperFillManager.fillReport(jasperFile, parameters, new JREmptyDataSource());

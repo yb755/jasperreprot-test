@@ -100,14 +100,7 @@
 				<textFieldExpression><![CDATA[$P{INSTALL_DATE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="159" y="576" width="137" height="18" uuid="2d932874-2938-45a5-8945-483dad5b4107"/>
-				<textElement>
-					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{SERVICE_FEE}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="365" y="576" width="112" height="16" uuid="fd3fce8d-1fff-4fd5-88f2-c162e956e20d"/>
+				<reportElement x="99" y="576" width="112" height="16" uuid="fd3fce8d-1fff-4fd5-88f2-c162e956e20d"/>
 				<textElement>
 					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
@@ -134,7 +127,7 @@
 				<imageExpression><![CDATA[$P{IMG_MARK_RB}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="44" y="422" width="213" height="18" uuid="839eb31c-3614-4b7e-b64b-4d7d8a9acff3"/>
+				<reportElement x="44" y="417" width="213" height="18" uuid="839eb31c-3614-4b7e-b64b-4d7d8a9acff3"/>
 				<textElement>
 					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
