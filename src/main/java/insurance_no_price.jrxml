@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="insurance_style2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="433ec9ee-4ba2-4898-be06-3eaa7975cb73">
-	<property name="ireport.zoom" value="1.8660295208389384"/>
+	<property name="ireport.zoom" value="2.48368529223663"/>
 	<property name="ireport.x" value="0"/>
-	<property name="ireport.y" value="240"/>
+	<property name="ireport.y" value="1082"/>
 	<parameter name="INSURANCE_NO" class="java.lang.String"/>
 	<parameter name="CAR_OWNER" class="java.lang.String"/>
 	<parameter name="CAR_NO" class="java.lang.String"/>
@@ -16,6 +16,7 @@
 	<parameter name="INSTALL_DATE" class="java.lang.String"/>
 	<parameter name="SERVICE_FEE" class="java.lang.String"/>
 	<parameter name="FRIST_BENEFICIARY" class="java.lang.String"/>
+	<parameter name="REMARK" class="java.lang.String"/>
 	<parameter name="YEAR" class="java.lang.String"/>
 	<parameter name="MONTH" class="java.lang.String"/>
 	<parameter name="DAY" class="java.lang.String"/>
@@ -33,89 +34,92 @@
 				<reportElement x="0" y="0" width="555" height="802" uuid="367df9ab-db1c-45b1-9e86-d80a71775551"/>
 				<imageExpression><![CDATA[$P{IMG_BACKGROUND}]]></imageExpression>
 			</image>
-			<staticText>
-				<reportElement x="422" y="67" width="46" height="33" uuid="df07afe2-223c-48c0-bbee-e25d558423d3"/>
-				<textElement>
-					<font size="16" isBold="true"/>
-				</textElement>
-				<text><![CDATA[BYKJ]]></text>
-			</staticText>
 			<textField>
-				<reportElement x="464" y="67" width="91" height="33" uuid="541e6292-7287-48d2-8193-2a7e615d59fc"/>
+				<reportElement x="424" y="55" width="110" height="33" uuid="541e6292-7287-48d2-8193-2a7e615d59fc"/>
 				<textElement>
 					<font size="16" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{INSURANCE_NO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="99" y="518" width="100" height="20" uuid="17b0cffc-6d2b-455f-a7e4-06aaca3efdaa"/>
+				<reportElement x="99" y="506" width="100" height="20" uuid="17b0cffc-6d2b-455f-a7e4-06aaca3efdaa"/>
 				<textElement>
 					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{CAR_NO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="99" y="497" width="100" height="16" uuid="dc32d58d-6bcf-48e0-8f63-369ce77d2d98"/>
+				<reportElement x="99" y="485" width="243" height="16" uuid="dc32d58d-6bcf-48e0-8f63-369ce77d2d98"/>
 				<textElement>
 					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{CAR_OWNER}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="364" y="498" width="100" height="15" uuid="535bf06c-e1c5-4897-8261-baf64ad3ed4b"/>
+				<reportElement x="369" y="485" width="168" height="15" uuid="535bf06c-e1c5-4897-8261-baf64ad3ed4b"/>
 				<textFieldExpression><![CDATA[$P{CARD_NO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="242" y="518" width="100" height="20" uuid="b15f4a0a-347a-440f-bde2-20462a93ddbc"/>
+				<reportElement x="242" y="506" width="100" height="20" uuid="b15f4a0a-347a-440f-bde2-20462a93ddbc"/>
 				<textElement>
 					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{CAR_MODEL}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="442" y="516" width="113" height="20" uuid="4d644e4b-6278-4410-b209-5a334de5daea"/>
+				<reportElement x="442" y="504" width="113" height="20" uuid="4d644e4b-6278-4410-b209-5a334de5daea"/>
 				<textFieldExpression><![CDATA[$P{REGISTER_DATE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="99" y="536" width="76" height="20" uuid="f85bf773-7ee8-4700-80e1-1e54c16aa5ff"/>
+				<reportElement x="99" y="524" width="76" height="20" uuid="f85bf773-7ee8-4700-80e1-1e54c16aa5ff"/>
 				<textElement>
 					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{CAR_PRICE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="99" y="556" width="158" height="16" uuid="8328f565-c901-4176-82ec-94c9dfaf85d8"/>
+				<reportElement x="99" y="544" width="158" height="16" uuid="8328f565-c901-4176-82ec-94c9dfaf85d8"/>
 				<textFieldExpression><![CDATA[$P{ENGINE_NO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="319" y="556" width="175" height="16" uuid="84faa568-155d-4a29-b80e-927f3dccb66b"/>
+				<reportElement x="319" y="544" width="175" height="16" uuid="84faa568-155d-4a29-b80e-927f3dccb66b"/>
 				<textFieldExpression><![CDATA[$P{VIN}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="242" y="536" width="133" height="20" uuid="876d05d5-8a82-4b26-befd-f1aca61421d6"/>
+				<reportElement x="242" y="524" width="133" height="20" uuid="876d05d5-8a82-4b26-befd-f1aca61421d6"/>
 				<textFieldExpression><![CDATA[$P{DEVICE_NO}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="442" y="536" width="100" height="20" uuid="5ea91d16-1ef1-4979-b2de-b59bce1ae80c"/>
+				<reportElement x="442" y="524" width="100" height="20" uuid="5ea91d16-1ef1-4979-b2de-b59bce1ae80c"/>
+				<textElement>
+					<font size="8"/>
+				</textElement>
 				<textFieldExpression><![CDATA[$P{INSTALL_DATE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="99" y="576" width="112" height="16" uuid="fd3fce8d-1fff-4fd5-88f2-c162e956e20d"/>
+				<reportElement x="99" y="564" width="395" height="16" uuid="fd3fce8d-1fff-4fd5-88f2-c162e956e20d"/>
 				<textElement>
 					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{FRIST_BENEFICIARY}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="433" y="686" width="34" height="20" uuid="7ca78f1a-dda8-4907-927c-afbbb26662cb"/>
+				<reportElement x="55" y="648" width="450" height="30" uuid="fd3fce8d-1fff-4fd5-88f2-c162e956e20d"/>
+				<textElement>
+					<font fontName="宋体" size="6" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{REMARK}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="433" y="708" width="34" height="20" uuid="7ca78f1a-dda8-4907-927c-afbbb26662cb"/>
 				<textFieldExpression><![CDATA[$P{YEAR}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="467" y="686" width="27" height="20" uuid="30f6284d-5ef3-4d0b-b6d4-599033180ac8"/>
+				<reportElement x="467" y="708" width="27" height="20" uuid="30f6284d-5ef3-4d0b-b6d4-599033180ac8"/>
 				<textFieldExpression><![CDATA[$P{MONTH}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="493" y="686" width="25" height="20" uuid="25accb43-975e-4a82-857d-c4d89c5edca2"/>
+				<reportElement x="493" y="708" width="25" height="20" uuid="25accb43-975e-4a82-857d-c4d89c5edca2"/>
 				<textFieldExpression><![CDATA[$P{DAY}]]></textFieldExpression>
 			</textField>
 			<image>
@@ -127,14 +131,14 @@
 				<imageExpression><![CDATA[$P{IMG_MARK_RB}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="44" y="417" width="213" height="18" uuid="839eb31c-3614-4b7e-b64b-4d7d8a9acff3"/>
+				<reportElement x="44" y="405" width="213" height="18" uuid="839eb31c-3614-4b7e-b64b-4d7d8a9acff3"/>
 				<textElement>
 					<font fontName="宋体" pdfFontName="STSong-Light" pdfEncoding="UniGB-UCS2-H" isPdfEmbedded="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{VALID_DATE_RANGE}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="473" y="177" width="21" height="15" uuid="27b02000-d33f-46e6-8b63-985ddb6064a6"/>
+				<reportElement x="470" y="165" width="50" height="15" uuid="27b02000-d33f-46e6-8b63-985ddb6064a6"/>
 				<textFieldExpression><![CDATA[$P{PAY_FOR_MONEY}]]></textFieldExpression>
 			</textField>
 		</band>
